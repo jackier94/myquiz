@@ -1,0 +1,24 @@
+.choices-div {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  border: 0.1rem solid rgb(86, 165, 235, 0.25);
+  background-color: cornsilk;
+}
+
+.choices-div:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(138, 86, 235, 0.5);
+  transform: translateY(-0.1rem);
+}
+
+.choice-letters {
+  padding: 1.5rem 2.5rem;
+  background-color: blueviolet;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 80rem;
+}
