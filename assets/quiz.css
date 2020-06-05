@@ -20,5 +20,10 @@
 
 .choice-text {
   padding: 1.5rem;
-  width: 80rem;
+  width: 100%;
+}
+
+#timer {
+  padding: 2rem;
+  color: red;
 }

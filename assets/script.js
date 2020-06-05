@@ -58,48 +58,6 @@ let questions = [
     answer4: "!!",
     correctAnswer: 1,
   },
-  {
-    question: "how do you print content into your console",
-    answer1: "varName",
-    answer2: "console.log",
-    answer3: "if/else statement",
-    answer4: "return",
-    correctAnswer: 2,
-  },
-  {
-    question:
-      "What method do you use to get the number of elements in an array?",
-    answer1: "console.log",
-    answer2: "index.length",
-    answer3: "number.length",
-    answer4: "array.length",
-    correctAnswer: 4,
-  },
-  {
-    question: "Indexes in an array always start at ...",
-    answer1: "[0]",
-    answer2: "[1]",
-    answer3: "[-1]",
-    answer4: "[undefined]",
-    correctAnswer: 1,
-  },
-  {
-    question: "What is the most common way to name variables",
-    answer1: "uppercase",
-    answer2: "lowercase",
-    answer3: "camelcase",
-    answer4: "integers",
-    correctAnswer: 3,
-  },
-  {
-    question:
-      "Which tag is responsible for given the tab in  our browser its name?",
-    answer1: "<h1>",
-    answer2: "<html>",
-    answer3: "<title>",
-    answer4: "<head>",
-    correctAnswer: 3,
-  },
 ];
 
 // constant variables
@@ -125,7 +83,12 @@ nextQuestion = () => {
     const number = answer.dataset["number"];
     answer.innerText = thisQuestion["answer" + number];
   });
+
+  allQuestions.splice(questionsIndex, 1);
+  console.log(allQuestions);
+  yourAnswer = true;
 };
+
 startQuiz();
 
 // let function startQuiz() {
@@ -133,4 +96,21 @@ startQuiz();
 //   score = 0;
 //   allQuestions = [...questions];
 //   console.log(allQuestions);
+// }
+
+//Timer Code
+
+var startSeconds = 75;
+timerEl = document.getElementById("timer");
+setInterval(function () {
+  startSeconds--;
+  if (startSeconds >= 0) {
+    timerEl.innerHTML = startSeconds;
+  }
+}, 1000);
+
+// function countDown() {
+//   let seconds = time 75;
+//   time--;
+//   timerEl.innerHTML = '${seconds}';
 // }
