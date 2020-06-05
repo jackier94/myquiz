@@ -117,11 +117,15 @@ startQuiz = () => {
 
 nextQuestion = () => {
   questionNumber++;
-  const questionsInIndex = Math.floor(Math.random() * allQuestions.length);
-  thisQuestion = allQuestions[questionsInIndex];
-  questions.innerText = thisQuestion.question;
-};
+  const questionsIndex = Math.floor(Math.random() * allQuestions.length);
+  thisQuestion = allQuestions[questionsIndex];
+  question.innerText = thisQuestion.question;
 
+  choices.forEach((answer) => {
+    const number = answer.dataset["number"];
+    answer.innerText = thisQuestion["answer" + number];
+  });
+};
 startQuiz();
 
 // let function startQuiz() {
