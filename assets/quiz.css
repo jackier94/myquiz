@@ -27,3 +27,23 @@
   padding: 2rem;
   color: red;
 }
+
+/* form */
+Form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+Input {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 2rem;
+  font-size: 1.8rem;
+  border: solid;
+}
+
+Input::placeholder {
+  color: lightgray;
+}

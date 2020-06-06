@@ -63,7 +63,7 @@ let questions = [
 // constant variables
 
 const correctPoints = 1;
-const finishQuestions = 10;
+const finishQuestions = 5;
 
 startQuiz = () => {
   questionNumber = 0;
@@ -74,6 +74,11 @@ startQuiz = () => {
 };
 
 nextQuestion = () => {
+  if (allQuestions.length === 0 || questionNumber >= finishQuestions) {
+    localStorage.setItem("logThisScore", score);
+    return window.location.assign("highscores.html");
+  }
+
   questionNumber++;
   const questionsIndex = Math.floor(Math.random() * allQuestions.length);
   thisQuestion = allQuestions[questionsIndex];
@@ -88,6 +93,27 @@ nextQuestion = () => {
   console.log(allQuestions);
   yourAnswer = true;
 };
+
+choices.forEach((answer) => {
+  answer.addEventListener("click", (e) => {
+    console.log(e.target);
+    if (!yourAnswer) return;
+
+    yourAnswer = false;
+    const yourChoice = e.target;
+    const otherAnswer = yourChoice.dataset["number"];
+    console.log(otherAnswer);
+    nextQuestion();
+  });
+});
+
+//  choices.forEach(function (answer) {
+//   console.log(answer);
+//    answer.addEventListener("click", function(e)
+//     console.log(e.target);
+//    }
+
+//  );
 
 startQuiz();
 
