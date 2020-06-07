@@ -6,7 +6,7 @@ console.log(choices);
 
 let thisQuestion = {};
 
-let yourAnswer = true;
+let yourAnswer = false;
 
 let score = 0;
 
@@ -102,7 +102,9 @@ choices.forEach((answer) => {
     yourAnswer = false;
     const yourChoice = e.target;
     const otherAnswer = yourChoice.dataset["number"];
-    console.log(otherAnswer);
+    // console.log(otherAnswer);
+
+    console.log(otherAnswer == thisQuestion.correctAnswer);
     nextQuestion();
   });
 });
