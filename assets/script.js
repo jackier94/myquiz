@@ -105,9 +105,20 @@ choices.forEach((answer) => {
     // console.log(otherAnswer);
 
     console.log(otherAnswer == thisQuestion.correctAnswer);
+
+    // correct or incorrect variables
+
+    applyAnswerStatus = "incorrect";
+    if (otherAnswer == thisQuestion.correctAnswer) {
+      applyAnswerStatus = "correct";
+      console.log(applyAnswerStatus);
+    }
+
     nextQuestion();
   });
 });
+
+//Function to Display sccore???
 
 //  choices.forEach(function (answer) {
 //   console.log(answer);
@@ -118,6 +129,12 @@ choices.forEach((answer) => {
 //  );
 
 startQuiz();
+
+// function to make score add up! :()
+
+// function addPoints(num)
+//     score += num;
+//     scoreCounterText.innerText = score;
 
 // let function startQuiz() {
 //   questionNumber = 0;

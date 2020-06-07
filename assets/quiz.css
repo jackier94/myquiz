@@ -1,10 +1,16 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
 .choices-div {
   display: flex;
   margin-bottom: 0.5rem;
-  width: 100%;
+
   font-size: 1.8rem;
   border: 0.1rem solid rgb(86, 165, 235, 0.25);
   background-color: cornsilk;
+  padding: 0.5rem;
 }
 
 .choices-div:hover {
@@ -20,11 +26,10 @@
 
 .choice-text {
   padding: 1.5rem;
-  width: 100%;
 }
 
 #timer {
-  padding: 2rem;
+  padding: 1rem;
   color: red;
 }
 
@@ -46,4 +51,9 @@ Input {
 
 Input::placeholder {
   color: lightgray;
+}
+
+#timer-score {
+  display: flex;
+  justify-content: space-between;
 }
